@@ -34,7 +34,10 @@
     "pree2e:protractor": "wait-on http-get://localhost:4200/ && protractor ./protractor.conf.js",
     "e2e": "npm-run-all -p -r pree2e:build pree2e:protractor"
   },
-  "dependencies": {},
+  "dependencies": {
+    "itunes-bridge": "^0.6.1",
+    "playback": "^0.2.0"
+  },
   "devDependencies": {
     "@angular/cli": "1.7.4",
     "@angular/common": "5.2.9",
@@ -79,5 +82,9 @@
     "wait-on": "2.1.0",
     "webdriver-manager": "12.0.6",
     "zone.js": "0.8.26"
-  }
+  },
+  "asarUnpack": [
+    "node_modules/itunes-bridge/wscript",
+    "node_modules/itunes-bridge/jxa"
+  ]
 }

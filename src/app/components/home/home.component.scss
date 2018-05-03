@@ -1,17 +1,68 @@
-.container {
+:host {
+  position: absolute;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-left-color: #d6d6ce;
+  border-top-color: #d6d6ce;
+  border-bottom-color: #424242;
+  border-right-color: #424242;
+  border-width: 1px;
+  border-style: solid;
+}
 
-  background: url(../../../assets/background.jpg) no-repeat center fixed;
-  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  background-size: cover; /* version standardisée */
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ffffff;
+  border-bottom-color: #848484;
+  border-right-color: #848484;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+}
+
+.header {
+  height: 18px;
+  background: linear-gradient(to right, #08216b, #a6caf0);
+  width: 100%;
+  flex: none;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  color: #fff;
+  font-size: 12px;
 
   .title {
-    color: white;
-    margin:0;
-    padding:50px 20px;
+    flex: 1;
+  }
+}
+
+.body {
+  flex: 1;
+  flex-direction: column;
+
+  .title {
+    font-size: 16px;
   }
 
+  .artist {
+    font-size: 14px;
+  }
+
+  .album {
+    font-size: 12px;
+  }
+
+  .album::before {
+    content: 'ALBUM';
+    font-size: 10px;
+    margin-right: 10px;
+  }
 }
+
+

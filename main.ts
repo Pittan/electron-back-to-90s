@@ -17,12 +17,21 @@ function createWindow() {
   const electronScreen = screen;
   const size = electronScreen.getPrimaryDisplay().workAreaSize;
 
+  const windowHeight = 150;
+  const windowWidth = 450;
+
   // Create the browser window.
   win = new BrowserWindow({
-    x: 0,
-    y: 0,
-    width: size.width,
-    height: size.height
+    // x: (size.width / 2) - (windowWidth / 2),
+    // y: (size.height / 2) - (windowHeight / 2),
+    x: 40,
+    y: 40,
+    width: windowWidth,
+    height: windowHeight,
+    // titleBarStyle: 'hidden',
+    transparent: true,
+    titleBarStyle: 'customButtonsOnHover',
+    frame: false
   });
 
   if (serve) {
