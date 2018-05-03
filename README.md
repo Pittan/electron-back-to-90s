@@ -10,6 +10,9 @@
 [![Tweet][twitter-badge]][twitter]
 
 # Introduction
+Based on https://github.com/maximegris/angular-electron.
+
+
 
 Bootstrap and package your project with Angular 5(+) and Electron (Typescript + SASS + Hot Reload) for creating Desktop applications.
 
